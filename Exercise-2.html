@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Element</title>
+<style>
+    .cont1{
+        text-align: center;
+    }
+    .cont2{
+        text-align: center;
+    }
+    
+    </style>
+
+</head>
+<body>
+    <div class="cont1">
+<button onclick="toggleElement()" >Toggle Element</button>
+</div>
+<div id="target" class="cont2">This is the target element.</div>
+<script>
+function toggleElement() {
+  var element = document.getElementById("target");
+  var currentStyle = getComputedStyle(element);
+  element.style.display = (currentStyle.display === "none") ? "block" : "none";
+}
+</script>
+</body>
+</html>
